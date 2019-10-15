@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "455915351847",
+    "firebase_url": "https://conmenu-b4ba5.firebaseio.com",
+    "project_id": "conmenu-b4ba5",
+    "storage_bucket": "conmenu-b4ba5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455915351847:android:699391e70d41d79f12c302",
+        "android_client_info": {
+          "package_name": "com.innovasoft.conmenu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455915351847-1o975qjll513mtijou41mmp42kr417gm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.innovasoft.conmenu",
+            "certificate_hash": "f19586d25da3fe0ff5a8958e65c536fa9093c577"
+          }
+        },
+        {
+          "client_id": "455915351847-f2oj53ligoe9f37s7nir7k69vt3933d1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA49FSN8VpgUqc0vGIpACnE2a223MV2M3c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455915351847-f2oj53ligoe9f37s7nir7k69vt3933d1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
