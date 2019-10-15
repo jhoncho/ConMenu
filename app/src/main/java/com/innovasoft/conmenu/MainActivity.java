@@ -2,6 +2,7 @@ package com.innovasoft.conmenu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
@@ -30,12 +31,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
             }
         } );
 
         btnSignUp.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent signUp = new Intent(MainActivity.this, Registrate.class );
+                startActivity( signUp );
+
+            }
+        } );
+        btnSignIn.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sigIn = new Intent(MainActivity.this, SignIn.class );
+                startActivity( sigIn );
 
             }
         } );
