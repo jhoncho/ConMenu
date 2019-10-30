@@ -31,12 +31,12 @@ public class Registrate extends AppCompatActivity {
         edtTelefono=(MaterialEditText)findViewById( R.id.edtTelefono );
         edtPassword=(MaterialEditText)findViewById( R.id.edtPassword );
 
-        btnRegistrase =(Button) findViewById( R.id.btnRegistrate );
+        btnRegistrase =(Button) findViewById( R.id.btnSingUp);
 
         // iniciamos la coneccion con firebase
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference tabla_usuario= database.getReference("User");
+        final DatabaseReference tabla_usuario= database.getReference("Usuario");
 
         btnRegistrase.setOnClickListener( new View.OnClickListener() {
             @Override

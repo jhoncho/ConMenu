@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
     tools:context=".SignIn">
 
     <LinearLayout
@@ -51,7 +50,7 @@
 
     <info.hoang8f.widget.FButton
         android:id="@+id/btnSingIn"
-        android:text="Iniciar Sesion"
+        android:text="Ingresar"
         android:textColor="@android:color/white"
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
@@ -64,5 +63,7 @@
         app:shadowEnabled="true"
         app:shadowHeight="5dp"
         app:cornerRadius="4dp"/>
+
+
 
 </RelativeLayout>

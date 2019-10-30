@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView( R.layout.activity_main );
 
         btnSignIn = (Button) findViewById( R.id.btnSingIn );
-        btnSignUp = (Button) findViewById( R.id.btnSignUp );
+        btnSignUp = (Button) findViewById( R.id.btnSingUp );
 
         txtSlogan = (TextView) findViewById( R.id.textslogan );
         Typeface face = Typeface.createFromAsset( getAssets(),"fonts/Nabila.ttf" );// agregamos la fuente para el texto de la app
