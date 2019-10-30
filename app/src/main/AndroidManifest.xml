@@ -13,7 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".DetalleComida"></activity>
-        <activity android:name=".ListaComida" />
         <activity
             android:name=".Home"
             android:label="@string/title_activity_home"
