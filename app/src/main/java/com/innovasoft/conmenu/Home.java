@@ -65,12 +65,13 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         // Init Firebase
         database = FirebaseDatabase.getInstance();
         Categoria = database.getReference("Categoria");
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Reemplace con su propia acción", Snackbar.LENGTH_LONG)
-                        .setAction("Accion", null).show();
+                Intent carritoIntent = new Intent(Home.this,Carrito.class);
+                startActivity( carritoIntent );
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

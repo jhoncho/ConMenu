@@ -17,7 +17,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.innovasoft.conmenu.BaseDatos.BaseDatos;
 import com.innovasoft.conmenu.Model.Comida;
+import com.innovasoft.conmenu.Model.orden;
 import com.squareup.picasso.Picasso;
 
 public class DetalleComida extends AppCompatActivity
@@ -29,10 +31,10 @@ public class DetalleComida extends AppCompatActivity
     FloatingActionButton btnCarrito;
     ElegantNumberButton numeroButton;
 
-    String ComidaID = "";
+    String IDproducto = "";
     Comida comidaActual;
 
-    FirebaseDatabase database;
+    FirebaseDatabase basededatos;
     DatabaseReference ComidaDetalle;
 
     @Override
@@ -42,11 +44,27 @@ public class DetalleComida extends AppCompatActivity
         setContentView( R.layout.activity_detalle_comida );
 
         // iniciamos firebase
-        database = FirebaseDatabase.getInstance();
-       ComidaDetalle = database.getReference( "Comida" );
+        basededatos = FirebaseDatabase.getInstance();
+       ComidaDetalle = basededatos.getReference( "Comida" );
 
         numeroButton = findViewById( R.id.numero_button );
         btnCarrito = findViewById( R.id.btnCarrito );
+
+        btnCarrito.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                new BaseDatos( getBaseContext()).adicionarCarrito(new orden(
+                    IDproducto,
+                    comidaActual.getNombre(),
+                    numeroButton.getNumber(),
+                    comidaActual.getPrecio(),
+                    comidaActual.getDescuento()
+            ));
+                Toast.makeText( DetalleComida.this, "Pedido Adicionado", Toast.LENGTH_SHORT ).show();
+
+            }
+        } );
 
         plato_descripcion = findViewById( R.id.plato_descripcion );
         plato_nombre = findViewById( R.id.plato_nombre );
@@ -60,10 +78,10 @@ public class DetalleComida extends AppCompatActivity
         //obtener identificación de comida del intent
 
         if (getIntent() != null)
-             ComidaID = getIntent().getStringExtra( "MenuId" );
-         if (!ComidaID.isEmpty() && ComidaID != null)
+             IDproducto = getIntent().getStringExtra( "MenuId" );
+         if (!IDproducto.isEmpty() && IDproducto != null)
          {
-             CargarDetalleComida( ComidaID );
+             CargarDetalleComida( IDproducto );
 
          }
 

@@ -58,6 +58,7 @@ public class SignIn extends AppCompatActivity {
 
                         mDialog.dismiss();
                         Usuarios usuarios = dataSnapshot.child( edtTelefono.getText().toString()).getValue(Usuarios.class);
+                        usuarios.setTelefono(edtTelefono.getText().toString() );
 
                         if (usuarios.getPassword().equals( edtPassword.getText().toString() ))
                         {
