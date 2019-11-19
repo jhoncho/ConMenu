@@ -2,12 +2,14 @@ package com.innovasoft.conmenu.Model;
 
 import java.util.List;
 
-public class Solicitud {
+public class Solicitud implements CharSequence {
 
     private String telefono;
     private String nombre;
     private String direccion;
     private String total;
+    private String estado;
+
     private List<orden> comidas; // lista de orden de comida
 
 
@@ -20,6 +22,15 @@ public class Solicitud {
         this.direccion = direccion;
         this.total = total;
         this.comidas = comidas;
+        this.estado = "0"; //por default 0
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public String getTelefono() {
@@ -60,5 +71,21 @@ public class Solicitud {
 
     public void setComidas(List<orden> comidas) {
         this.comidas = comidas;
+    }
+
+
+    @Override
+    public int length() {
+        return 0;
+    }
+
+    @Override
+    public char charAt(int index) {
+        return 0;
+    }
+
+    @Override
+    public CharSequence subSequence(int start, int end) {
+        return null;
     }
 }
